@@ -8,10 +8,10 @@ namespace PrimerParcial.Models
         public int Id { get; set; }
 
         [Required]
-        public string Name { get; set; } // Ejemplo: "Harina de Trigo"
+        public string Name { get; set; } = string.Empty; // Ejemplo: "Harina de Trigo"
 
         [Required]
-        public string Quantity { get; set; } // Ejemplo: "2 tazas" o "500 gramos"
+        public string Quantity { get; set; } = string.Empty; // Ejemplo: "2 tazas" o "500 gramos"
 
         // --- Relaciones de Entity Framework Core ---
 
@@ -19,6 +19,6 @@ namespace PrimerParcial.Models
         public int RecipeId { get; set; }
 
         // Propiedad de Navegación: El lado 'uno'
-        public Recipe Recipe { get; set; }
+        public Recipe Recipe { get; set; } = null!;
     }
 }

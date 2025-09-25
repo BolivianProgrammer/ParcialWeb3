@@ -13,9 +13,9 @@ namespace PrimerParcial.Data
 
         // DbSets (Colecciones) que mapean a las tablas de la base de datos
 
-        public DbSet<Recipe> Recipes { get; set; }
-        public DbSet<Ingredient> Ingredients { get; set; }
-        public DbSet<Category> Categories { get; set; }
+        public DbSet<Recipe> Recipes { get; set; } = null!;
+        public DbSet<Ingredient> Ingredients { get; set; } = null!;
+        public DbSet<Category> Categories { get; set; } = null!;
 
         // Opcional: Configuración de la relación uno a muchos
         // Esto a menudo se puede omitir si las convenciones de EF Core se cumplen,
